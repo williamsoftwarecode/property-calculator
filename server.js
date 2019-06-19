@@ -80,15 +80,15 @@ router.route('/issues/delete/:id').get((req, res) => {
             res.json('Removed successfully');
     });
 });
-app.use('/', router);
-app.listen(4000, () => console.log(`Express server running on port 4000`));
+// app.use('/', router);
+// app.listen(4000, () => console.log(`Express server running on port 4000`));
 
-// // Serve only the static files form the dist directory
-// app.use(express.static(__dirname + '/dist/property-calculator'));
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/property-calculator'));
 
-// app.get('/*', function(req,res) {
-//     res.sendFile(path.join(__dirname+'/dist/property-calculator/index.html'));
-// });
+app.get('/*', function(req,res) {
+    res.sendFile(path.join(__dirname+'/dist/property-calculator/index.html'));
+});
 
-// // Start the app by listening on the default Heroku port
-// app.listen(process.env.PORT || 8080);
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
