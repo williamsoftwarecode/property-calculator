@@ -80,7 +80,7 @@ router.route('/issues/delete/:id').get((req, res) => {
             res.json('Removed successfully');
     });
 });
-// app.use('/', router);
+app.use('/', router);
 // app.listen(4000, () => console.log(`Express server running on port 4000`));
 
 // Serve only the static files form the dist directory
