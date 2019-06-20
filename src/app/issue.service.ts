@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class IssueService {
 
-  uri = 'http://localhost:8080';
+  uri = 'http://property-calculator.herokuapp.com';
 
   constructor(private http: HttpClient) {
   }
